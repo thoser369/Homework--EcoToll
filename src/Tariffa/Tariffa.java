@@ -35,27 +35,27 @@ public class Tariffa {
 		
 		switch(classe_ambientale) {
 		case "Euro 1":
-			this.tariffaambientale=1.00;
+			this.tariffaambientale=0.20;
 			break;
 			
 		case "Euro 2":
-			this.tariffaambientale=2.00;
+			this.tariffaambientale=0.50;
 			break;
 			
 		case "Euro 3":
-			this.tariffaambientale=3.00;
+			this.tariffaambientale=0.80;
 			break;
 			
 		case "Euro 4":
-			this.tariffaambientale=4.50;
+			this.tariffaambientale=1.50;
 			break;
 			
 		case "Euro 5":
-			this.tariffaambientale=6.50;
+			this.tariffaambientale=3.50;
 			break;
 			
 		case "Euro 6":
-			this.tariffaambientale=9.00;
+			this.tariffaambientale=5.00;
 			break;
 		}
 	}

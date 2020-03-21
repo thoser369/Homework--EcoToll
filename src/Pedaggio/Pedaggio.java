@@ -62,6 +62,20 @@ public class Pedaggio implements InterfacciaPedaggio{
 		return pedaggio;
 	}
 	
+	public String getGestionePedaggio() { return this.gestionepedaggio; }
+	public String setGestionePedaggio(String n) { return this.gestionepedaggio=n; }
+	
 	public double getPedaggio() { return this.pedaggio; }
 	public double setPedaggio(double n) { return this.pedaggio=n; }
+	
+	public String toString() {
+		return "Descrizione Pedaggio: \n" + 
+				"Scelta calcolo del pedaggio: " + this.gestionepedaggio + "\n" +
+				"Casello partenza: " + this.casello_partenza.getNome() + "\n" +
+				"Casello arrivo: " + this.casello_arrivo.getNome() + "\n" +
+				"Targa veicolo: " + this.veicolo.getTarga() + "\n" +
+				"Tariffa unitaria veicolo: " + this.tariffa.getTariffaUnitaria() + "\n" +
+				"Tariffa ambientale veicolo: " + this.tariffa.getTariffaAmbientale() + "\n" +
+	            "Pedaggio calcolato: " + this.pedaggio;
+	}
 }
