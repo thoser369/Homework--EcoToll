@@ -37,8 +37,8 @@ public class Pedaggio implements InterfacciaPedaggio{
 		
 		tariffaautostrada=this.casello_partenza.getRifAutostrada().getTariffa();
 		
-		pedaggio=distanza_caselli+(tariffaunitaria + tariffaautostrada);
-		pedaggio=pedaggio+(pedaggio + iva / 100);
+		pedaggio=distanza_caselli*(tariffaunitaria + tariffaautostrada);
+		pedaggio=pedaggio+(pedaggio * iva / 100);
 		pedaggio=(Math.round(pedaggio*100)/100.0);
 		return pedaggio;
 	}
@@ -56,10 +56,12 @@ public class Pedaggio implements InterfacciaPedaggio{
 		
 		tariffaambientale=this.tariffa.getTariffaAmbientale();
 		
-		pedaggio=distanza_caselli+(tariffaunitaria + tariffaambientale);
-		pedaggio=pedaggio+(pedaggio + iva / 100);
+		pedaggio=distanza_caselli*(tariffaunitaria + tariffaambientale);
+		pedaggio=pedaggio+(pedaggio * iva / 100);
 		pedaggio=(Math.round(pedaggio*100)/100.0);
 		return pedaggio;
 	}
-
+	
+	public double getPedaggio() { return this.pedaggio; }
+	public double setPedaggio(double n) { return this.pedaggio=n; }
 }
