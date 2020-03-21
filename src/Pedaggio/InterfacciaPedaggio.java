@@ -1,3 +1,4 @@
+package Pedaggio;
 
 public interface InterfacciaPedaggio {
 	

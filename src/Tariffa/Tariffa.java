@@ -1,3 +1,4 @@
+package Tariffa;
 import Veicolo.Veicolo;
 
 public class Tariffa {
